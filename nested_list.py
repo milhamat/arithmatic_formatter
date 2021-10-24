@@ -38,5 +38,9 @@ print(data)
 print(data[0])
 
 # try query more
-rslt, num1, num2, nt = data[0]
-print(rslt)
+for n in range(len(data)):
+    rslt, num1, num2, nt = data[n]
+    print(rslt)
+
+
+# print(len(data))
