@@ -1,6 +1,6 @@
-def arithmetic_arranger(problems):
+def formatter(list):
     # first format the list data input
-    new_list = [problems[i:i + 1] for i in range(0, len(problems), 1)]
+    new_list = [list[i:i + 1] for i in range(0, len(list), 1)]
 
     # second split the data
     sprt = ' '.join(new_list)  # split the list into string
@@ -11,6 +11,7 @@ def arithmetic_arranger(problems):
     b = None
     result = None
     nota = ''
+    data = []
 
     # forth separate the which is addition or subtraction
     if split_str[1] == '+':
@@ -20,10 +21,13 @@ def arithmetic_arranger(problems):
         total = int(split_str[0]) - int(split_str[2])
         result = total
 
-    # fifth store the result inside the new variable 
+    # fifth store the result inside the new variable
     a = split_str[0]
     b = split_str[2]
     nota = split_str[1]
+
+def arithmetic_arranger(problems):
+
 
 
 
