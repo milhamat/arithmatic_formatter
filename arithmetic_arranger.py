@@ -32,20 +32,21 @@ def arithmetic_arranger(problems):
     # sixth make new empty variable
     data = []
 
-    #
+    # appending the new_list into empty data list variable
     for n in range(len(new_list)):
         data.append(formatter(new_list[n]))
 
-    #
+    # formatting the output
     for n in range(len(data)):
         rslt, num1, num2, nt = data[n]
         frmt = f'''
-                 {num1}
-                {nt} {num2} 
+                {num1}
+            {nt} {num2} 
                 -----
                 {rslt}
                 '''
         print(frmt)
+
 
 
 
