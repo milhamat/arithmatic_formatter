@@ -38,5 +38,5 @@ print(data)
 print(data[0])
 
 # try query more
-rslt, a, b, nt = data[0]
+rslt, num1, num2, nt = data[0]
 print(rslt)
