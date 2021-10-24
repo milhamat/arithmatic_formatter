@@ -40,7 +40,13 @@ print(data[0])
 # try query more
 for n in range(len(data)):
     rslt, num1, num2, nt = data[n]
-    print(rslt)
+    frmt = f'''
+           {num1}
+           {num2}
+           ----- {nt}
+           {rslt}
+           '''
+    print(frmt)
 
 
 # print(len(data))
