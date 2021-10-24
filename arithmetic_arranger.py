@@ -4,11 +4,8 @@ def formatter(list):
     split_str = sprt.rsplit()  # split the string into list
 
     # third make new variable for container
-    a = None
-    b = None
     result = None
-    nota = ''
-
+    
     # forth separate the which is addition or subtraction
     if split_str[1] == '+':
         total = int(split_str[0]) + int(split_str[2])
