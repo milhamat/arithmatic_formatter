@@ -33,3 +33,10 @@ for n in range(len(list_1)):
     data.append(formatter(list_1[n]))
 
 print(data)
+
+# try to query the tuple nested in list
+print(data[0])
+
+# try query more
+rslt, a, b, nt = data[0]
+print(rslt)
