@@ -1,5 +1,5 @@
 list_1 = [['32 + 50'],
-          ['20 + 50'],
+          ['20 - 50'],
           ['32 + 10']]
 # actually the code up there is matrix
 
@@ -26,10 +26,10 @@ def formatter(list):
     return result, a, b, nota
 
 
-data = None
+data = []
 
 for n in range(len(list_1)):
-    print(list_1[n])
-    # data = formatter(val)
+    # print(list_1[n])
+    data.append(formatter(list_1[n]))
 
-# print(data)
+print(data)
