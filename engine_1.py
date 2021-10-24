@@ -26,6 +26,14 @@ def formatter(list):
 
 
 rslt, num1, num2, nt = formatter(lis)
-print(num1, nt, num2, '=', rslt)
+# print(num1, nt, num2, '=', rslt)
+
+frmt = f'''
+       {num1}
+       {num2}
+       ----- {nt}
+       {rslt}
+       '''
+print(frmt)
 # formatter(lis2)
 
