@@ -21,10 +21,11 @@ def formatter(list):
     b = split_str[2]
     nota = split_str[1]
 
-    return result, a, b, nota  # it will return as atuple
+    return result, a, b, nota  # it will return as a tuple
 
 
 
-print(formatter(lis))
+rslt, num1, num2, nt = formatter(lis)
+print(num1, nt, num2, '=', rslt)
 # formatter(lis2)
 
