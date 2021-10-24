@@ -1,9 +1,35 @@
-
-
-list_1 = [[1, 2, 3],
-          [5, 6, 8],
-          [12, 10, 2]]
+list_1 = [['32 + 50'],
+          ['20 + 50'],
+          ['32 + 10']]
 # actually the code up there is matrix
 
-for val in list_1:
-    print(val)
+
+def formatter(list):
+    sprt = ' '.join(list)  # split the list into string
+    split_str = sprt.rsplit()  # split the string into list
+    a = None
+    b = None
+    result = None
+    nota = ''
+
+    if split_str[1] == '+':
+        total = int(split_str[0]) + int(split_str[2])
+        result = total
+    elif split_str[1] == '-':
+        total = int(split_str[0]) - int(split_str[2])
+        result = total
+
+    a = split_str[0]
+    b = split_str[2]
+    nota = split_str[1]
+
+    return result, a, b, nota
+
+
+data = None
+
+for n in range(len(list_1)):
+    print(list_1[n])
+    # data = formatter(val)
+
+# print(data)
