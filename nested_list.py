@@ -32,10 +32,10 @@ for n in range(len(list_1)):
     # print(list_1[n])
     data.append(formatter(list_1[n]))
 
-print(data)
+# print(data)
 
 # try to query the tuple nested in list
-print(data[0])
+# print(data[0])
 
 # try query more
 for n in range(len(data)):
