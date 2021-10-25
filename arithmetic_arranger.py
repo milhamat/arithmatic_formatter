@@ -5,7 +5,7 @@ def formatter(list):
 
     # third make new variable for container
     result = None
-    
+
     # forth separate the which is addition or subtraction
     if split_str[1] == '+':
         total = int(split_str[0]) + int(split_str[2])
