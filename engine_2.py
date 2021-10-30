@@ -35,6 +35,12 @@ def arithmetic_arranger(problems):
     print(data)
 
     print(data[0][1])
+    print('\n')
+    for n in data:
+        for i in n:
+            print('n : ', n)
+            print('i : ', i)
+
     # formatting the output
     # for n in range(len(data)):
     #     rslt, num1, num2, nt = data[n]
