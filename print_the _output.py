@@ -6,16 +6,17 @@
 print('   32         1      45      123      988\n- 698    - 3801    + 43    +  49    +  40\n-----    ------    ----    -----    -----\n -666     -3800      88      172     1028')
 #
 
-# list = [1,2,3,4,5,6,7,8,9,10]
-# gnp = []
-# gjl = []
-#
-# for n in list:
-#     if n % 2 == 0:
-#         gnp.append(n)
-#     else:
-#         gjl.append(n)
-#
+list = [1,2,3,4,5,6,7,8,9,10]
+gnp = []
+gjl = []
+
+for n in list:
+    if n % 2 == 0:
+        gnp.append(n)
+    else:
+        gjl.append(n)
+
+
 # tot_gnp = len(gnp)
 # tot_gjl = len(gjl)
 #

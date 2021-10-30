@@ -32,26 +32,28 @@ def arithmetic_arranger(problems):
     # appending the new_list into empty data list variable
     for n in range(len(new_list)):
         data.append(formatter(new_list[n]))
-    print(data)
-
-    print(data[0][1])
-    print('\n')
-    for n in range(len(data)):
-        for i in range(n):
-            print('n : ', n)
-            print('i : ', i)
-
+    # print(data)
+    r = []
+    n1 = []
+    n2 = []
+    nto = []
     # formatting the output
-    # for n in range(len(data)):
-    #     rslt, num1, num2, nt = data[n]
-    #     frmt = f'''
-    #             {num1}
-    #           {nt} {num2}
-    #             -----
-    #             {rslt}
-    #             '''
-        # print(frmt)
-        # return frmt
+    for n in range(len(data)):
+        rslt, num1, num2, nt = data[n]
+        r.append(str(rslt))
+        n1.append(str(num1))
+        n2.append(str(num2))
+        nto.append(str(nt))
+
+    r_str = '     '.join(r)
+    n1_str = '     '.join(n1)
+    n2_str = '     '.join(n2)
+    nt_str = '  '.join(nto)
+    print('\n'.join((n1_str, nt_str + n2_str, r_str)))
+
+
+
+
 
 
 
