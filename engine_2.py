@@ -36,20 +36,24 @@ def arithmetic_arranger(problems):
     r = []
     n1 = []
     n2 = []
-    nto = []
+    dash = []
+    space = ' '
     # formatting the output
     for n in range(len(data)):
         rslt, num1, num2, nt = data[n]
-        r.append(str(rslt))
-        n1.append(str(num1))
-        n2.append(str(num2))
-        nto.append(str(nt))
+        r.append('  ' + str(rslt))
+        n1.append(str('   ' + num1))
+        n2.append(str(' ' + nt + space + num2))
+        dash.append(' ----')
+        # nto.append(str(nt))
 
-    r_str = '     '.join(r)
-    n1_str = '     '.join(n1)
+    r_str = '      '.join(r)
+    n1_str = '      '.join(n1)
     n2_str = '     '.join(n2)
-    nt_str = '  '.join(nto)
-    print('\n'.join((n1_str, nt_str + n2_str, r_str)))
+    ds_str = '      '.join(dash)
+    # nt_str = ''.join(nto)
+
+    print('\n'.join((n1_str, n2_str, ds_str, r_str)))
 
 
 
