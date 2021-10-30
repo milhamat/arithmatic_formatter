@@ -38,7 +38,7 @@ def arithmetic_arranger(problems):
         rslt, num1, num2, nt = data[n]
         frmt = f'''
                 {num1}
-            {nt} {num2} 
+              {nt} {num2} 
                 -----
                 {rslt}
                 '''
