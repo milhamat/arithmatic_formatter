@@ -36,8 +36,8 @@ def arithmetic_arranger(problems):
 
     print(data[0][1])
     print('\n')
-    for n in data:
-        for i in n:
+    for n in range(len(data)):
+        for i in range(n):
             print('n : ', n)
             print('i : ', i)
 
