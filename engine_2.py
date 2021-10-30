@@ -29,7 +29,24 @@ def arithmetic_arranger(problems):
     # sixth make new empty variable
     data = []
 
-    return '   32         1      45      123      988\n- 698    - 3801    + 43    +  49    +  40\n-----    ------    ----    -----    -----\n -666     -3800      88      172     1028'
+    # appending the new_list into empty data list variable
+    for n in range(len(new_list)):
+        data.append(formatter(new_list[n]))
+    print(data)
+
+    print(data[0][1])
+    # formatting the output
+    # for n in range(len(data)):
+    #     rslt, num1, num2, nt = data[n]
+    #     frmt = f'''
+    #             {num1}
+    #           {nt} {num2}
+    #             -----
+    #             {rslt}
+    #             '''
+        # print(frmt)
+        # return frmt
+
 
 
 
