@@ -22,9 +22,11 @@ def formatter(list):
     return result, a, b, nota
 
 
-def arithmetic_arranger(problems):
+def arithmetic_arranger(problems, answer):
+    answer=False
     # first format the list data input
     new_list = [problems[i:i + 1] for i in range(0, len(problems), 1)]
+    # print(new_list)
 
     # sixth make new empty variable
     data = []
@@ -42,11 +44,20 @@ def arithmetic_arranger(problems):
                 -----
                 {rslt}
                 '''
-        print(frmt)
+        frmt2 = f'''
+                {num1}
+              {nt} {num2} 
+                -----
+                
+                '''
+        if answer:
+            print(frmt)
+        else:
+            print(frmt2)
         # return frmt
 
 
 
 
 
-arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
+# arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
