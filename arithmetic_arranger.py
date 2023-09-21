@@ -27,6 +27,11 @@ def arithmetic_arranger(problems, answer):
     # first format the list data input
     new_list = [problems[i:i + 1] for i in range(0, len(problems), 1)]
     # print(new_list)
+    # print(len(new_list))
+    if len(new_list)>5:
+        raise TypeError("Too many problems")
+
+
 
     # sixth make new empty variable
     data = []
@@ -50,14 +55,15 @@ def arithmetic_arranger(problems, answer):
                 -----
                 
                 '''
-        if answer:
-            print(frmt)
-        else:
-            print(frmt2)
+        # if answer:
+            # print(frmt)
+        # else:
+            # print(frmt2)
         # return frmt
 
 
 
-
-
-# arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
+# normal problem
+arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"],True)
+# To many problems
+# arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49", "123 + 49", "123 + 49"],True)
