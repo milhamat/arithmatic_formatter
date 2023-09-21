@@ -6,13 +6,28 @@ def formatter(list):
     # third make new variable for container
     result = None
 
+    # make error for input a and b
+    if len(split_str[0]) >= 5:
+        raise TypeError("Numbers cannot be more than four digits.")
+    if len(split_str[2]) >= 5:
+        raise TypeError("Numbers cannot be more than four digits.")
+
     # forth separate the which is addition or subtraction
     if split_str[1] == '+':
-        total = int(split_str[0]) + int(split_str[2])
-        result = total
+        try:
+            total = int(split_str[0]) + int(split_str[2])
+            result = total
+        except ValueError:
+            print("Numbers must only contain digits.")
     elif split_str[1] == '-':
-        total = int(split_str[0]) - int(split_str[2])
-        result = total
+        try:
+            total = int(split_str[0]) - int(split_str[2])
+            result = total
+        except ValueError:
+            print("Numbers must only contain digits.")
+    else:
+        raise TypeError("Operator must be '+' or '-'.")
+
 
     # fifth store the result inside the new variable
     a = split_str[0]
@@ -28,8 +43,8 @@ def arithmetic_arranger(problems, answer):
     new_list = [problems[i:i + 1] for i in range(0, len(problems), 1)]
     # print(new_list)
     # print(len(new_list))
-    if len(new_list)>5:
-        raise TypeError("Too many problems")
+    if len(new_list) > 5:
+        raise TypeError("Too many problems.")
 
 
 
@@ -56,14 +71,21 @@ def arithmetic_arranger(problems, answer):
                 
                 '''
         # if answer:
-            # print(frmt)
+        #     print(frmt)
         # else:
-            # print(frmt2)
+        #     print(frmt2)
         # return frmt
 
 
 
-# normal problem
-arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"],True)
-# To many problems
+## normal problem. (ok)
+# arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"],True)
+## To many problems. (ok)
 # arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49", "123 + 49", "123 + 49"],True)
+## notation. (ok)
+# arithmetic_arranger(["32 / 698", "3801 - 2", "45 + 43", "123 + 49"],True)
+## Number only contain digits.
+# arithmetic_arranger(["ss + 698", "380 - 2", "45 + 43", "123 + 49"],True)
+## Numbers cannot be more than four digits. (ok)
+# arithmetic_arranger(["32 + 698", "553801 - 2", "45 + 43", "123 + 49"],True)
+# arithmetic_arranger(["32 + 698", "2 - 553801", "45 + 43", "123 + 49"],True)
