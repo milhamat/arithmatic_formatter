@@ -4,30 +4,29 @@ def formatter(list):
     split_str = sprt.rsplit()  # split the string into list
 
     # third make new variable for container
-    result = None
 
     # make error for input a and b
     if len(split_str[0]) >= 5:
         raise TypeError("Numbers cannot be more than four digits.")
     if len(split_str[2]) >= 5:
         raise TypeError("Numbers cannot be more than four digits.")
+    try:
+        ip1 = int(split_str[0])
+        ip2 = int(split_str[2])
+    except:
+        raise ValueError("Numbers must only contain digits.")
 
     # forth separate the which is addition or subtraction
     if split_str[1] == '+':
-        try:
-            total = int(split_str[0]) + int(split_str[2])
-            result = total
-        except ValueError:
-            print("Numbers must only contain digits.")
+        total = ip1 + ip2
+        result = total
+
     elif split_str[1] == '-':
-        try:
-            total = int(split_str[0]) - int(split_str[2])
-            result = total
-        except ValueError:
-            print("Numbers must only contain digits.")
+        total = ip1 - ip2
+        result = total
+
     else:
         raise TypeError("Operator must be '+' or '-'.")
-
 
     # fifth store the result inside the new variable
     a = split_str[0]
@@ -37,16 +36,13 @@ def formatter(list):
     return result, a, b, nota
 
 
-def arithmetic_arranger(problems, answer):
-    answer=False
+def arithmetic_arranger(problems, answer=False):
     # first format the list data input
     new_list = [problems[i:i + 1] for i in range(0, len(problems), 1)]
     # print(new_list)
     # print(len(new_list))
-    if len(new_list) > 5:
+    if len(new_list) >= 5:
         raise TypeError("Too many problems.")
-
-
 
     # sixth make new empty variable
     data = []
@@ -70,21 +66,21 @@ def arithmetic_arranger(problems, answer):
                 -----
                 
                 '''
-        # if answer:
-        #     print(frmt)
-        # else:
-        #     print(frmt2)
+        if answer:
+            print(frmt)
+        else:
+            print(frmt2)
         # return frmt
 
 
 
 ## normal problem. (ok)
-# arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"],True)
+arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"],True)
 ## To many problems. (ok)
 # arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49", "123 + 49", "123 + 49"],True)
 ## notation. (ok)
 # arithmetic_arranger(["32 / 698", "3801 - 2", "45 + 43", "123 + 49"],True)
-## Number only contain digits.
+## Number only contain digits. (ok)
 # arithmetic_arranger(["ss + 698", "380 - 2", "45 + 43", "123 + 49"],True)
 ## Numbers cannot be more than four digits. (ok)
 # arithmetic_arranger(["32 + 698", "553801 - 2", "45 + 43", "123 + 49"],True)
