@@ -3,8 +3,7 @@ def formatter(list):
     sprt = ' '.join(list)  # split the list into string
     split_str = sprt.rsplit()  # split the string into list
 
-    # third make new variable for container
-
+    # Third make new variable for container
     # make error for input a and b
     if len(split_str[0]) >= 5:
         raise TypeError("Numbers cannot be more than four digits.")
@@ -46,6 +45,7 @@ def arithmetic_arranger(problems, answer=False):
 
     # sixth make new empty variable
     data = []
+    arranged_problems = ''
     top_row = ''
     bottom_row = ''
     dashes = ''
@@ -64,30 +64,12 @@ def arithmetic_arranger(problems, answer=False):
         dashes += f"---- {nt} "
         solutions += f"{rslt}" + " " * (7 - len(str(rslt)))
 
-    print(top_row)
-    print(bottom_row)
-    print(dashes)
-    print(solutions)
+    if answer:
+        arranged_problems = '\n'.join((top_row, bottom_row, dashes, solutions))
+    else:
+        arranged_problems = '\n'.join((top_row, bottom_row, dashes))
+
+    return arranged_problems
 
 
 
-
-
-
-
-
-
-
-
-## normal problem. (ok)
-arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"],True)
-# arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
-## To many problems. (ok)
-# arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49", "123 + 49", "123 + 49"],True)
-## notation. (ok)
-# arithmetic_arranger(["32 / 698", "3801 - 2", "45 + 43", "123 + 49"],True)
-## Number only contain digits. (ok)
-# arithmetic_arranger(["ss + 698", "380 - 2", "45 + 43", "123 + 49"],True)
-## Numbers cannot be more than four digits. (ok)
-# arithmetic_arranger(["32 + 698", "553801 - 2", "45 + 43", "123 + 49"],True)
-# arithmetic_arranger(["32 + 698", "2 - 553801", "45 + 43", "123 + 49"],True)
