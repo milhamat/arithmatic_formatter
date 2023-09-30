@@ -59,8 +59,16 @@ def arithmetic_arranger(problems, answer=False):
     for n in range(len(data)):
         rslt, num1, num2, nt = data[n]
 
+        top_row += f"{num1}" + " "*(7-len(str(num1)))
+        bottom_row += f"{num2}" + " " * (7 - len(str(num2)))
         dashes += f"---- {nt} "
+        solutions += f"{rslt}" + " " * (7 - len(str(rslt)))
+
+    print(top_row)
+    print(bottom_row)
     print(dashes)
+    print(solutions)
+
 
 
 
