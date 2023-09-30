@@ -46,8 +46,10 @@ def arithmetic_arranger(problems, answer=False):
 
     # sixth make new empty variable
     data = []
-    # nwtprnt=new type of print
-    nwtprnt = []
+    top_row = ''
+    bottom_row = ''
+    dashes = ''
+    solutions = ''
 
     # appending the new_list into empty data list variable
     for n in range(len(new_list)):
@@ -56,6 +58,9 @@ def arithmetic_arranger(problems, answer=False):
     # formatting the output
     for n in range(len(data)):
         rslt, num1, num2, nt = data[n]
+
+        dashes += f"---- {nt} "
+    print(dashes)
 
 
 
@@ -67,7 +72,7 @@ def arithmetic_arranger(problems, answer=False):
 
 
 ## normal problem. (ok)
-# arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"],True)
+arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"],True)
 # arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"])
 ## To many problems. (ok)
 # arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49", "123 + 49", "123 + 49"],True)
