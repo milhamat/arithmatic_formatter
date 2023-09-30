@@ -48,4 +48,4 @@ class TestAritmaticFormatter(unittest.TestCase):
             arithmetic_arranger(["32 + 698", "553801 - 2", "45 + 43", "123 + 49"], True)
 
 
-unittest.main()
+# unittest.main()
